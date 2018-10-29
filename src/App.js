@@ -146,7 +146,6 @@ function NewTodo(props) {
       <AddCircle  onClick={props.addTodo} color="primary" style={{ fontSize: 35 }} />
     </IconButton>
   </div>;
-
 }
 
 function TodoList(props) {
