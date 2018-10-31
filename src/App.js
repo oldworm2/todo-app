@@ -153,7 +153,7 @@ function NewTodo(props) {
       }}
       />
 
-      <IconButton aria-label="Delete">
+      <IconButton aria-label="Delete" disabled={!props.newTodo}>
         <AddCircle  onClick={props.addTodo} color="primary" style={{ fontSize: 35 }} />
       </IconButton>
     </React.Fragment>
