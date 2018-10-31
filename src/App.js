@@ -14,24 +14,21 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import AddCircle from '@material-ui/icons/AddCircle';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      title: 'Todo title',
-      newTodo: '',
-      todos: [
-        {
-          title: 'Making Todo App',
-          done: false
-        },
-        {
-          title: 'Refactoring Todo App',
-          done: false
-        }
-      ]
-    };
-    
-  }
+  
+  state = {
+    title: 'Todo title',
+    newTodo: '',
+    todos: [
+      {
+        title: 'Making Todo App',
+        done: false
+      },
+      {
+        title: 'Refactoring Todo App',
+        done: false
+      }
+    ]
+  };
 
   newTodoChanged(event){
     this.setState({
@@ -91,9 +88,7 @@ class App extends Component {
         container>
 
           <Grid item>
-            <h1>
-              {this.state.title}
-            </h1>
+            <TodoTitle title={this.state.title} />
           </Grid>
 
           <Grid item>
@@ -105,9 +100,7 @@ class App extends Component {
           </Grid>
 
           <Grid item>
-            <h2>
-              Todo List
-            </h2> 
+            <TodoListTitle title={'Todo List'}/> 
           </Grid>
 
           <Grid item>
@@ -126,46 +119,67 @@ class App extends Component {
   }
 }
 
-function NewTodo(props) {
-  return <div>
-    <TextField
-    id="outlined-dense"
-    label="New Todo"
-    margin="dense"
-    variant="outlined"
-    onChange={props.newTodoChanged}
-    value={props.newTodo}
-    onKeyPress={event => {
-      if (event.key === 'Enter') {
-        props.addTodo();
-      }
-    }}
-    />
+function TodoTitle(props) {
+  return (
+    <h1>
+      {props.title}
+    </h1>
+  );
+}
 
-    <IconButton aria-label="Delete">
-      <AddCircle  onClick={props.addTodo} color="primary" style={{ fontSize: 35 }} />
-    </IconButton>
-  </div>;
+function TodoListTitle(props) {
+  return (
+    <h2>
+      {props.title}
+    </h2>
+  );
+}
+
+function NewTodo(props) {
+  return (
+    <React.Fragment>
+      <TextField
+      style={{marginLeft: '30px'}}
+      id="outlined-dense"
+      label="New Todo"
+      margin="dense"
+      variant="outlined"
+      onChange={props.newTodoChanged}
+      value={props.newTodo}
+      onKeyPress={event => {
+        if (event.key === 'Enter') {
+          props.addTodo();
+        }
+      }}
+      />
+
+      <IconButton aria-label="Delete">
+        <AddCircle  onClick={props.addTodo} color="primary" style={{ fontSize: 35 }} />
+      </IconButton>
+    </React.Fragment>
+  );
 }
 
 function TodoList(props) {
-  return <List>
-    {props.todos.map((todo, index) => (
-      <ListItem key={index} dense >
-        <Checkbox
-          checked={todo.done}
-          tabIndex={-1}
-          onClick={() => props.toggleTodoDone(index)}
-        />
-        <ListItemText primary={`${index+1}. ${todo.title}`} style={todo.done ? {'text-decoration': 'line-through'} : {} } />
-        <ListItemSecondaryAction>
-          <IconButton aria-label="Delete">
-            <DeleteIcon onClick={() => props.removeTodo(index)} color="secondary" />
-          </IconButton>
-        </ListItemSecondaryAction>
-      </ListItem>
-    ))}
-  </List>;
+  return (
+    <List>
+      {props.todos.map((todo, index) => (
+        <ListItem key={index} dense >
+          <Checkbox
+            checked={todo.done}
+            tabIndex={-1}
+            onClick={() => props.toggleTodoDone(index)}
+          />
+          <ListItemText primary={`${index+1}. ${todo.title}`} style={todo.done ? {textDecoration: 'line-through'} : {} } />
+          <ListItemSecondaryAction>
+            <IconButton aria-label="Delete">
+              <DeleteIcon onClick={() => props.removeTodo(index)} color="secondary" />
+            </IconButton>
+          </ListItemSecondaryAction>
+        </ListItem>
+      ))}
+    </List>
+  );
 }
 
 export default App;
