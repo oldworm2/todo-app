@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "oldworm2.github.io/todo-app/precache-manifest.4f4c31544866bb15aac0f0ab87e6ed23.js"
+  "/todo-app/precache-manifest.785074c9fb7d140fc374a5b8e1e5e724.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("oldworm2.github.io/todo-app/index.html", {
+workbox.routing.registerNavigationRoute("/todo-app/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

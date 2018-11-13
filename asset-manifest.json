@@ -1,13 +1,13 @@
 {
-  "main.css": "oldworm2.github.io/todo-app/static/css/main.96cf430c.chunk.css",
-  "main.js": "oldworm2.github.io/todo-app/static/js/main.1ec22a71.chunk.js",
-  "main.js.map": "oldworm2.github.io/todo-app/static/js/main.1ec22a71.chunk.js.map",
-  "static/js/1.4421b5a3.chunk.js": "oldworm2.github.io/todo-app/static/js/1.4421b5a3.chunk.js",
-  "static/js/1.4421b5a3.chunk.js.map": "oldworm2.github.io/todo-app/static/js/1.4421b5a3.chunk.js.map",
-  "runtime~main.js": "oldworm2.github.io/todo-app/static/js/runtime~main.b14eb66d.js",
-  "runtime~main.js.map": "oldworm2.github.io/todo-app/static/js/runtime~main.b14eb66d.js.map",
-  "static/css/main.96cf430c.chunk.css.map": "oldworm2.github.io/todo-app/static/css/main.96cf430c.chunk.css.map",
-  "index.html": "oldworm2.github.io/todo-app/index.html",
-  "precache-manifest.4f4c31544866bb15aac0f0ab87e6ed23.js": "oldworm2.github.io/todo-app/precache-manifest.4f4c31544866bb15aac0f0ab87e6ed23.js",
-  "service-worker.js": "oldworm2.github.io/todo-app/service-worker.js"
+  "main.css": "/todo-app/static/css/main.96cf430c.chunk.css",
+  "main.js": "/todo-app/static/js/main.d794f25a.chunk.js",
+  "main.js.map": "/todo-app/static/js/main.d794f25a.chunk.js.map",
+  "static/js/1.4421b5a3.chunk.js": "/todo-app/static/js/1.4421b5a3.chunk.js",
+  "static/js/1.4421b5a3.chunk.js.map": "/todo-app/static/js/1.4421b5a3.chunk.js.map",
+  "runtime~main.js": "/todo-app/static/js/runtime~main.84c007b1.js",
+  "runtime~main.js.map": "/todo-app/static/js/runtime~main.84c007b1.js.map",
+  "static/css/main.96cf430c.chunk.css.map": "/todo-app/static/css/main.96cf430c.chunk.css.map",
+  "index.html": "/todo-app/index.html",
+  "precache-manifest.785074c9fb7d140fc374a5b8e1e5e724.js": "/todo-app/precache-manifest.785074c9fb7d140fc374a5b8e1e5e724.js",
+  "service-worker.js": "/todo-app/service-worker.js"
 }
